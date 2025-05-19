@@ -53,8 +53,10 @@ requirements:
   host:
     - if: not osx
       then:
+        - if: blas_impl == 'mkl'
+          then:
+            - mkl-devel ==${{ mkl }}
         - blas-devel * *_${{ blas_impl }}
-        - mkl-devel ==${{ mkl }}
     - if: linux
       then: libgomp
     - if: not linux
