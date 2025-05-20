@@ -11,7 +11,7 @@ source:
   sha256: 2fda42b57b7b8427d724551bd041616d85401fb9382e42b0349132a28920a34f
 
 build:
-  number: 0
+  number: 1
   script:
     - if: unix
       then: |
@@ -23,6 +23,7 @@ build:
             -DWHISPER_BUILD_EXAMPLES=ON \
             -DWHISPER_BUILD_TESTS=OFF \
             -DWHISPER_BUILD_SERVER=OFF \
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} \
             $CMAKE_ARGS
         cmake --build build
         cmake --install build
@@ -33,6 +34,7 @@ build:
             -DWHISPER_BUILD_EXAMPLES=ON ^
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} ^
             %CMAKE_ARGS% || exit 1
         cmake --build build || exit 1
         cmake --install build || exit 1
@@ -50,6 +52,9 @@ requirements:
       then: libgomp
     - if: not linux
       then: llvm-openmp
+    - if: cuda_compiler_version != "None"
+      then:
+        - ${{ compiler('cuda') }}
   host:
     - if: not osx
       then:
@@ -61,6 +66,9 @@ requirements:
       then: libgomp
     - if: not linux
       then: llvm-openmp
+    - if: cuda_compiler_version != "None"
+      then:
+        - cuda-version ${{ cuda_compiler_version }}.*
   run_constraints:
     # llama.cpp also vendors ggml
     - llama.cpp <0.0.0a0
