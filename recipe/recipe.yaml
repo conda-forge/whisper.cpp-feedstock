@@ -23,6 +23,7 @@ build:
             -DWHISPER_BUILD_EXAMPLES=ON \
             -DWHISPER_BUILD_TESTS=OFF \
             -DWHISPER_BUILD_SERVER=OFF \
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} \
             $CMAKE_ARGS
         cmake --build build
         cmake --install build
@@ -33,6 +34,7 @@ build:
             -DWHISPER_BUILD_EXAMPLES=ON ^
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} ^
             %CMAKE_ARGS% || exit 1
         cmake --build build || exit 1
         cmake --install build || exit 1
