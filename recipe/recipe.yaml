@@ -1,6 +1,6 @@
 context:
   name: whisper.cpp
-  version: '1.7.5'
+  version: "1.7.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ggml-org/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: 2fda42b57b7b8427d724551bd041616d85401fb9382e42b0349132a28920a34f
+  sha256: 166140e9a6d8a36f787a2bd77f8f44dd64874f12dd8359ff7c1f4f9acb86202e
 
 build:
   number: 0
@@ -48,8 +48,7 @@ requirements:
     - pkgconfig
     - if: linux
       then: libgomp
-    - if: not linux
-      then: llvm-openmp
+      else: llvm-openmp
   host:
     - if: not osx
       then:
@@ -59,8 +58,7 @@ requirements:
         - blas-devel * *_${{ blas_impl }}
     - if: linux
       then: libgomp
-    - if: not linux
-      then: llvm-openmp
+      else: llvm-openmp
   run_constraints:
     # llama.cpp also vendors ggml
     - llama.cpp <0.0.0a0
