@@ -7,7 +7,7 @@
 
 [project]
 name = "whisper.cpp-feedstock"
-version = "3.50.1"  # conda-smithy version used to generate this file
+version = "3.52.3"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/whisper.cpp-feedstock"
 authors = ["@conda-forge/whisper.cpp"]
 channels = ["conda-forge"]
@@ -100,6 +100,7 @@ description = "List contents of whisper.cpp-feedstock packages built for variant
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
+shellcheck = "*"
 [feature.smithy.tasks.build-locally]
 cmd = "python ./build-locally.py"
 description = "Build packages locally using the same setup scripts used in conda-forge's CI"
