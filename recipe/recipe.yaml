@@ -55,7 +55,8 @@ requirements:
         - if: blas_impl == 'mkl'
           then:
             - mkl-devel ==${{ mkl }}
-        - blas-devel * *_${{ blas_impl }}
+          else:
+            - blas-devel * *_${{ blas_impl }}
     - if: linux
       then: libgomp
       else: llvm-openmp
