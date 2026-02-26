@@ -21,6 +21,7 @@ build:
             -DBUILD_SHARED_LIBS=ON \
             -DGGML_METAL=${{ 'OFF' if not (osx and arm64) else 'ON' }} \
             -DWHISPER_BUILD_EXAMPLES=ON \
+            -DWHISPER_SDL2=ON \
             -DWHISPER_BUILD_TESTS=OFF \
             -DWHISPER_BUILD_SERVER=OFF \
             $CMAKE_ARGS
@@ -31,6 +32,7 @@ build:
             -DBUILD_SHARED_LIBS=ON ^
             -DCMAKE_INSTALL_RPATH=$PREFIX/lib/whisper-cpp ^
             -DWHISPER_BUILD_EXAMPLES=ON ^
+            -DWHISPER_SDL2=ON \
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
             %CMAKE_ARGS% || exit 1
@@ -50,6 +52,7 @@ requirements:
       then: libgomp
       else: llvm-openmp
   host:
+    - sdl2
     - if: not osx
       then:
         - if: blas_impl == 'mkl'
