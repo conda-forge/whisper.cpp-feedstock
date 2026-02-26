@@ -5,7 +5,7 @@
 
 [workspace]
 name = "whisper.cpp-feedstock"
-version = "3.54.1"  # conda-smithy version used to generate this file
+version = "3.55.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/whisper.cpp-feedstock"
 authors = ["@conda-forge/whisper.cpp"]
 channels = ["conda-forge"]
@@ -53,24 +53,12 @@ description = "Build whisper.cpp-feedstock with variant linux_ppc64le_ directly 
 [tasks."inspect-linux_ppc64le_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_.yaml"
 description = "List contents of whisper.cpp-feedstock packages built for variant linux_ppc64le_"
-[tasks."build-osx_64_blas_implblis"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_blas_implblis.yaml"
-description = "Build whisper.cpp-feedstock with variant osx_64_blas_implblis directly (without setup scripts)"
-[tasks."inspect-osx_64_blas_implblis"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_blas_implblis.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant osx_64_blas_implblis"
-[tasks."build-osx_64_blas_implmkl"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_blas_implmkl.yaml"
-description = "Build whisper.cpp-feedstock with variant osx_64_blas_implmkl directly (without setup scripts)"
-[tasks."inspect-osx_64_blas_implmkl"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_blas_implmkl.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant osx_64_blas_implmkl"
-[tasks."build-osx_64_blas_implopenblas"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_blas_implopenblas.yaml"
-description = "Build whisper.cpp-feedstock with variant osx_64_blas_implopenblas directly (without setup scripts)"
-[tasks."inspect-osx_64_blas_implopenblas"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_blas_implopenblas.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant osx_64_blas_implopenblas"
+[tasks."build-osx_64_"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_.yaml"
+description = "Build whisper.cpp-feedstock with variant osx_64_ directly (without setup scripts)"
+[tasks."inspect-osx_64_"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant osx_64_"
 [tasks."build-osx_arm64_"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_.yaml"
 description = "Build whisper.cpp-feedstock with variant osx_arm64_ directly (without setup scripts)"
