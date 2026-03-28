@@ -71,6 +71,7 @@ requirements:
     - if: cuda_compiler_version != "None"
       then:
         - cuda-version ${{ cuda_compiler_version }}.*
+        - libcublas-dev
   run_constraints:
     # llama.cpp also vendors ggml
     - llama.cpp <0.0.0a0
