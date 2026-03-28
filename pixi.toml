@@ -5,7 +5,7 @@
 
 [workspace]
 name = "whisper.cpp-feedstock"
-version = "3.55.1"  # conda-smithy version used to generate this file
+version = "3.58.0"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/whisper.cpp-feedstock"
 authors = ["@conda-forge/whisper.cpp"]
 channels = ["conda-forge"]
@@ -23,30 +23,54 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build whisper.cpp-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_blas_implblis"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implblis.yaml"
-description = "Build whisper.cpp-feedstock with variant linux_64_blas_implblis directly (without setup scripts)"
-[tasks."inspect-linux_64_blas_implblis"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implblis.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implblis"
-[tasks."build-linux_64_blas_implmkl"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implmkl.yaml"
-description = "Build whisper.cpp-feedstock with variant linux_64_blas_implmkl directly (without setup scripts)"
-[tasks."inspect-linux_64_blas_implmkl"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implmkl.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implmkl"
-[tasks."build-linux_64_blas_implopenblas"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implopenblas.yaml"
-description = "Build whisper.cpp-feedstock with variant linux_64_blas_implopenblas directly (without setup scripts)"
-[tasks."inspect-linux_64_blas_implopenblas"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implopenblas.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implopenblas"
-[tasks."build-linux_aarch64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_.yaml"
-description = "Build whisper.cpp-feedstock with variant linux_aarch64_ directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant linux_aarch64_"
+[tasks."build-linux_64_blas_implbliscuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implbliscuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implbliscuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implbliscuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implbliscuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implbliscuda_compiler_version12.9"
+[tasks."build-linux_64_blas_implbliscuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implbliscuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implbliscuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implbliscuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implbliscuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implbliscuda_compiler_versionNone"
+[tasks."build-linux_64_blas_implmklcuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implmklcuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implmklcuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implmklcuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implmklcuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implmklcuda_compiler_version12.9"
+[tasks."build-linux_64_blas_implmklcuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implmklcuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implmklcuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implmklcuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implmklcuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implmklcuda_compiler_versionNone"
+[tasks."build-linux_64_blas_implopenblascuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implopenblascuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implopenblascuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implopenblascuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implopenblascuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implopenblascuda_compiler_version12.9"
+[tasks."build-linux_64_blas_implopenblascuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_blas_implopenblascuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_64_blas_implopenblascuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-linux_64_blas_implopenblascuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_blas_implopenblascuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_64_blas_implopenblascuda_compiler_versionNone"
+[tasks."build-linux_aarch64_cuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_cuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_aarch64_cuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_cuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_cuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_aarch64_cuda_compiler_version12.9"
+[tasks."build-linux_aarch64_cuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_cuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant linux_aarch64_cuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_cuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_cuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant linux_aarch64_cuda_compiler_versionNone"
 [tasks."build-linux_ppc64le_"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_.yaml"
 description = "Build whisper.cpp-feedstock with variant linux_ppc64le_ directly (without setup scripts)"
@@ -65,24 +89,42 @@ description = "Build whisper.cpp-feedstock with variant osx_arm64_ directly (wit
 [tasks."inspect-osx_arm64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
 description = "List contents of whisper.cpp-feedstock packages built for variant osx_arm64_"
-[tasks."build-win_64_blas_implblis"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implblis.yaml"
-description = "Build whisper.cpp-feedstock with variant win_64_blas_implblis directly (without setup scripts)"
-[tasks."inspect-win_64_blas_implblis"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implblis.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implblis"
-[tasks."build-win_64_blas_implmkl"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implmkl.yaml"
-description = "Build whisper.cpp-feedstock with variant win_64_blas_implmkl directly (without setup scripts)"
-[tasks."inspect-win_64_blas_implmkl"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implmkl.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implmkl"
-[tasks."build-win_64_blas_implopenblas"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implopenblas.yaml"
-description = "Build whisper.cpp-feedstock with variant win_64_blas_implopenblas directly (without setup scripts)"
-[tasks."inspect-win_64_blas_implopenblas"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implopenblas.yaml"
-description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implopenblas"
+[tasks."build-win_64_blas_implbliscuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implbliscuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implbliscuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implbliscuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implbliscuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implbliscuda_compiler_version12.9"
+[tasks."build-win_64_blas_implbliscuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implbliscuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implbliscuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implbliscuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implbliscuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implbliscuda_compiler_versionNone"
+[tasks."build-win_64_blas_implmklcuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implmklcuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implmklcuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implmklcuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implmklcuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implmklcuda_compiler_version12.9"
+[tasks."build-win_64_blas_implmklcuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implmklcuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implmklcuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implmklcuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implmklcuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implmklcuda_compiler_versionNone"
+[tasks."build-win_64_blas_implopenblascuda_compiler_version12.9"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implopenblascuda_compiler_version12.9.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implopenblascuda_compiler_version12.9 directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implopenblascuda_compiler_version12.9"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implopenblascuda_compiler_version12.9.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implopenblascuda_compiler_version12.9"
+[tasks."build-win_64_blas_implopenblascuda_compiler_versionNone"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_blas_implopenblascuda_compiler_versionNone.yaml"
+description = "Build whisper.cpp-feedstock with variant win_64_blas_implopenblascuda_compiler_versionNone directly (without setup scripts)"
+[tasks."inspect-win_64_blas_implopenblascuda_compiler_versionNone"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_blas_implopenblascuda_compiler_versionNone.yaml"
+description = "List contents of whisper.cpp-feedstock packages built for variant win_64_blas_implopenblascuda_compiler_versionNone"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"

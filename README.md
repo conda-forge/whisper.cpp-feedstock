@@ -29,31 +29,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_blas_implblis</td>
+              <td>linux_64_blas_implbliscuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implblis" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implbliscuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_blas_implmkl</td>
+              <td>linux_64_blas_implbliscuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implmkl" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implbliscuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_blas_implopenblas</td>
+              <td>linux_64_blas_implmklcuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implopenblas" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implmklcuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64</td>
+              <td>linux_64_blas_implmklcuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implmklcuda_compiler_versionNone" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_blas_implopenblascuda_compiler_version12.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implopenblascuda_compiler_version12.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_blas_implopenblascuda_compiler_versionNone</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_blas_implopenblascuda_compiler_versionNone" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_cuda_compiler_version12.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_cuda_compiler_version12.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_cuda_compiler_versionNone</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_cuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -78,24 +106,45 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_blas_implblis</td>
+              <td>win_64_blas_implbliscuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implblis" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implbliscuda_compiler_version12.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_blas_implmkl</td>
+              <td>win_64_blas_implbliscuda_compiler_versionNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implmkl" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implbliscuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_blas_implopenblas</td>
+              <td>win_64_blas_implmklcuda_compiler_version12.9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implopenblas" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implmklcuda_compiler_version12.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_blas_implmklcuda_compiler_versionNone</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implmklcuda_compiler_versionNone" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_blas_implopenblascuda_compiler_version12.9</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implopenblascuda_compiler_version12.9" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_blas_implopenblascuda_compiler_versionNone</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=25735&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/whisper.cpp-feedstock?branchName=main&jobName=win&configuration=win%20win_64_blas_implopenblascuda_compiler_versionNone" alt="variant">
                 </a>
               </td>
             </tr>
@@ -228,4 +277,5 @@ Feedstock Maintainers
 =====================
 
 * [@pavelzw](https://github.com/pavelzw/)
+* [@ruben-arts](https://github.com/ruben-arts/)
 
