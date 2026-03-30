@@ -98,6 +98,11 @@ tests:
 
   - script:
       - whisper-cli --help
+    requirements:
+      run:
+        - if: cuda_compiler_version != "None"
+          then:
+            - cuda-compat
 
 about:
   homepage: https://github.com/ggml-org/whisper.cpp
