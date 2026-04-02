@@ -30,6 +30,7 @@ build:
             -DWHISPER_BUILD_TESTS=OFF \
             -DWHISPER_BUILD_SERVER=OFF \
             -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} \
+            ${{ '-DCMAKE_CUDA_FLAGS="-w"' if cuda_compiler_version != "None" else '' }} \
             $CMAKE_ARGS
         cmake --build build
         cmake --install build
@@ -42,8 +43,9 @@ build:
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
             -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} ^
+            ${{ '-DCMAKE_CUDA_FLAGS="-w -Xcompiler /W0"' if cuda_compiler_version != "None" else '' }} ^
             %CMAKE_ARGS% || exit 1
-        cmake --build build || exit 1
+        cmake --build build -- -j2 || exit 1
         cmake --install build || exit 1
 
 requirements:
