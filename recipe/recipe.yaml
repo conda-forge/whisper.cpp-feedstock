@@ -43,6 +43,7 @@ build:
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
             -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} ^
+            ${{ '-DCMAKE_CUDA_ARCHITECTURES="61;70;75;80;86;89;90"' if cuda_compiler_version != "None" else '' }} ^
             ${{ '-DCMAKE_CUDA_FLAGS="-w -Xcompiler /W0"' if cuda_compiler_version != "None" else '' }} ^
             %CMAKE_ARGS% || exit 1
         cmake --build build -- -j2 || exit 1
