@@ -11,7 +11,12 @@ source:
   sha256: 870ba21409cdf66697dc4db15ebdb13bc67037d76c7cc63756c81471d8f1731a
 
 build:
-  number: 1
+  number: 2
+  dynamic_linking:
+    missing_dso_allowlist:
+      - if: linux
+        then:
+          - "*/libcuda.so.1"
   script:
     - if: unix
       then: |
@@ -24,6 +29,8 @@ build:
             -DWHISPER_SDL2=ON \
             -DWHISPER_BUILD_TESTS=OFF \
             -DWHISPER_BUILD_SERVER=OFF \
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} \
+            ${{ '-DCMAKE_CUDA_FLAGS="-w"' if cuda_compiler_version != "None" else '' }} \
             $CMAKE_ARGS
         cmake --build build
         cmake --install build
@@ -35,8 +42,11 @@ build:
             -DWHISPER_SDL2=ON ^
             -DWHISPER_BUILD_TESTS=OFF ^
             -DWHISPER_BUILD_SERVER=OFF ^
+            -DGGML_CUDA=${{ "ON" if cuda_compiler_version != "None" else "OFF" }} ^
+            ${{ '-DCMAKE_CUDA_ARCHITECTURES="61;70;75;80;86;89;90"' if cuda_compiler_version != "None" else '' }} ^
+            ${{ '-DCMAKE_CUDA_FLAGS="-w -Xcompiler /W0"' if cuda_compiler_version != "None" else '' }} ^
             %CMAKE_ARGS% || exit 1
-        cmake --build build || exit 1
+        cmake --build build -- -j2 || exit 1
         cmake --install build || exit 1
 
 requirements:
@@ -51,6 +61,9 @@ requirements:
     - if: linux
       then: libgomp
       else: llvm-openmp
+    - if: cuda_compiler_version != "None"
+      then:
+        - ${{ compiler('cuda') }}
   host:
     - sdl2
     - if: not osx
@@ -63,6 +76,17 @@ requirements:
     - if: linux
       then: libgomp
       else: llvm-openmp
+    - if: cuda_compiler_version != "None"
+      then:
+        - cuda-version ${{ cuda_compiler_version }}.*
+        - cuda-cudart-dev
+        - libcublas-dev
+  run:
+    - if: cuda_compiler_version != "None"
+      then:
+        - cuda-version ${{ cuda_compiler_version }}.*
+        - cuda-cudart
+        - libcublas
   run_constraints:
     # llama.cpp also vendors ggml
     - llama.cpp <0.0.0a0
@@ -80,8 +104,10 @@ tests:
         - ggml.h
         - whisper.h
 
-  - script:
-      - whisper-cli --help
+  - if: cuda_compiler_version == "None"
+    then:
+      - script:
+          - whisper-cli --help
 
 about:
   homepage: https://github.com/ggml-org/whisper.cpp
