@@ -1,6 +1,6 @@
 context:
   name: whisper.cpp
-  version: "1.9.2"
+  version: "1.9.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ggml-org/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: a6abd064fcca8b85e794d205abf328c522e9451db43a3eadc178b883b7d0e9cd
+  sha256: 1650f884effba487025143bd8facd2f9fb40a83b3737a732803c67a8d659d9c0
 
 build:
   number: 0
