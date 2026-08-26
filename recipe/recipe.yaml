@@ -11,7 +11,7 @@ source:
   sha256: 1650f884effba487025143bd8facd2f9fb40a83b3737a732803c67a8d659d9c0
 
 build:
-  number: 0
+  number: 1
   dynamic_linking:
     missing_dso_allowlist:
       - if: linux
