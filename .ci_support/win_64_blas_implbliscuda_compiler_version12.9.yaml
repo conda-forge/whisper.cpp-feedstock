@@ -1,7 +1,9 @@
 blas_impl:
 - blis
 c_compiler:
-- vs2022
+- vs
+c_compiler_version:
+- '2022'
 c_stdlib:
 - vs
 channel_sources:
@@ -13,7 +15,9 @@ cuda_compiler:
 cuda_compiler_version:
 - '12.9'
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 mkl:
 - '2026'
 sdl2:
